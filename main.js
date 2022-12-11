@@ -3,8 +3,10 @@ const addNoteButton = notesContainer.querySelector(".add-notes");
 
 getNotes().forEach(notes=>{
     const noteElement = createNoteElement(note.id,note.content);
-    notesContainer.insertBefore()
-})
+    notesContainer.insertBefore(noteElement,addNoteButton);
+});
+
+addNoteButton.addEventListener("click",()=>addNote());
 
 
 function getNotes(){
@@ -43,5 +45,18 @@ function updateNote(id,content){
 }
 function deleteNote(id,content){
     console.log("Deleting Note");
-    console.log(id,newContent);
+    console.log(id);
+}
+
+function addNote(){
+    const notes = getNotes();
+    const noteObject={
+        id: Math.floor(Math.random()*10000),
+        content: ""
+    };
+    const noteElement = createNoteElement(noteObject.id,noteObject.content);
+    notesContainer.insertBefore(noteElement,addNoteButton);
+
+    existingNotes.push(noteObject);
+    saveNotes(notes);
 }
