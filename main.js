@@ -1,7 +1,10 @@
 const notesContainer = document.getElementById("app");
 const addNoteButton = notesContainer.querySelector(".add-notes");
 
-getNotes()
+getNotes().forEach(notes=>{
+    const noteElement = createNoteElement(note.id,note.content);
+    notesContainer.insertBefore()
+})
 
 
 function getNotes(){
