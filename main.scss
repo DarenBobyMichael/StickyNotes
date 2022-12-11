@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background: rgb(0, 107, 107);
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 24px;
+    gap: 24px;
+
+    .notes {
+        background: rgb(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        box-shadow: 0px 4px 4px 3px rgba(0, 36, 39, 0.5);
+        border-radius: 36px;
+        border-color: rgb(0, 36, 39);
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        resize: none;
+
+
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        border: 5px;
+        margin: 0px;
+
+
+    }
+
+    .add-notes {
+        width: 200px;
+        height: 200px;
+        background: rgba($color: #000000, $alpha: 0.3);
+        box-shadow: 0px 4px 4px 1px rgba(2, 0, 0, 0.6);
+        border-radius: 36px;
+        border-color: rgb(0, 36, 39);
+        outline: none;
+        border: none;
+        font-size: 70px;
+        color: rgba($color: #000000, $alpha: 0.5);
+        cursor: pointer;
+        transition: background 0.2s;
+
+    }
+
+    .add-notes:hover {
+        background: rgba($color: #000000, $alpha: 0.6);
+    }
+
+
+}
